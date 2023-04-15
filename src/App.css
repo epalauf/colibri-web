@@ -1,0 +1,117 @@
+
+@font-face {
+  font-family: "Rofitaste";
+  src: url("./assets/fonts/RofiTaste.ttf");
+}
+
+@font-face {
+  font-family: "Caviardreams";
+  src: url("./assets/fonts/CaviarDreams_Bold.ttf");
+}
+
+:root {
+  --colibri-orange: #ee8a3d;
+  --colibri-gray: #3a4249;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.LandingContainer::before {
+  background-image: url('./assets/images/home.jpeg');
+  background-position: center;
+  content: "";
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.LandingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.LandingContainerTitle {
+  font-family: "Rofitaste", sans-serif;
+  font-size: 8rem;
+  color: var(--colibri-orange);
+  margin-top: 40px;
+  text-shadow: 0.5px 0.5px 0.5px rgba(75, 75, 75, 0.5);
+  text-align: center;
+}
+
+.LandingContainerSubtitle {
+  font-size: 2rem;
+  color: var(--colibri-gray);
+  font-family: "Caviardreams", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px rgba(75, 75, 75, 0.5);
+  text-align: center;
+}
+
+.LandingContainerSections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 100px;
+  
+}
+
+.LandingContainerSection {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: inset 0px 10px 10px -3px rgba(0,0,0,0.3);
+  cursor: pointer;
+  border: 3px solid var(--colibri-gray);
+}
+
+.LandingContainerSectionText {
+  font-family: "Caviardreams", sans-serif;
+  color: var(--colibri-orange);
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 374px) {
+  .LandingContainerTitle {
+    font-size: 6rem;
+  }
+  
+  .LandingContainerSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .LandingContainerSections {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .LandingContainerSectionText {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 914px) {
+
+
+  .LandingContainerSections {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
